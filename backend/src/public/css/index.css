@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #cfd9df66;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+main {
+  max-width: 60vw;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 30px;
+  color: #1c1c24;
+}
+
+.header p {
+  font-size: 16px;
+  color: #1c1c24;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 50px;
+  padding: 20px 0;
+  position: relative;
+}
+
+.steps::before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 20%;
+  top: 45px;
+  background: #275d2a;
+}
+
+.steps div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #1c1c2477;
+}
+
+.steps div.active {
+  color: #1c1c24;
+}
+
+.steps div span {
+  border-radius: 50%;
+  border: 3px solid white;
+  height: 50px;
+  width: 50px;
+  color: white;
+  font-weight: bold;
+  line-height: 45px;
+  background: #54617a7e;
+}
+
+.steps div.active span {
+  background: #275d2a;
+}
+
+.uploads {
+  border: 1px dashed #275d2a;
+  padding: 20px 40px;
+}
+
+.uploads button {
+  padding: 10px 30px;
+  background: #275d2a;
+  color: white;
+  outline: none;
+  border: 3px solid white;
+  font-size: 30px;
+  border-radius: 50px;
+}
+
+.uploads p {
+  padding-top: 20px;
+  color: #1c1c2477;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background: #ffffff;
+  justify-items: center;
+  justify-self: left;
+  text-align: left;
+  gap: 10px;
+  padding: 40px 0;
+  width: 60vw;
+}
+
+.links {
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.links a {
+  text-decoration: none;
+}
+
+.links a:nth-child(1) {
+  color: #1c1c24;
+}
+
+.links a:nth-child(2) {
+  color: white;
+  background: #54617a7e;
+  border-radius: 50px;
+  border: 3px solid white;
+  padding: 10px 30px;
+}
+
+.link-active {
+  background: #275d2a !important;
+}

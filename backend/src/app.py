@@ -1,8 +1,8 @@
-from flask import Flask, send_from_directory
+from flask import Flask, send_from_directory, render_template, url_for
 from flask_cors import CORS
 from utils import environment
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='public/html', static_folder='public/css')
 app.config['UPLOAD_FOLDER'] = environment.UPLOAD_FOLDER
 
 # Routes
@@ -14,8 +14,16 @@ app.register_blueprint(cens_router, url_prefix='/api/cens')
 CORS(app)
 
 @app.route("/")
-def ping():
-    return "Todo ok!"
+def step1():
+    return render_template('step1.html')
+
+@app.route("/step2")
+def step2():
+    return render_template('step2.html')
+
+@app.route("/dashboard") 
+def dashboard():
+    return render_template('dashboard.html')
 
 @app.route('/uploads/<name>')
 def download_file(name):

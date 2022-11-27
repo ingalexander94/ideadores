@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <title>Ideadores | CENS</title>
+  </head>
+  <body>
+    <main>
+      <section class="header">
+        <h1>Pronósticos de demanda de energía</h1>
+        <p>
+          Bienvenido, sigue los pasos para realizar el pronóstico de la energía.
+        </p>
+      </section>
+      <section class="steps">
+          <div class="active">
+            <span>1</span>
+            <p>Adjuntar documento</p>
+          </div>
+          <div>
+            <span>2</span>
+            <p>Selección de modelo</p>
+          </div>
+      </section>
+      <section class="uploads">
+        <button>Seleccione un archivo</button>
+        <p>[11:02 a. m.] Jonathan Cortes Silva
+          Adjuntar un documento en Excel para realizar el procesamiento de datos. Recuerda que este debe tener por separado la fecha, el año, el mes, día, hora, nombre del día, evento, temperatura, precipitación humedad y la velocidad de viento.</p>
+      </section>
+      <section class="links">
+        <a href="#">Cancelar</a>
+        <a href="{{url_for('step2')}}">Siguiente</a>
+      </section>
+      <img src="../../uploads/Grupo 5@2x.png" alt="Logo CENS" height="50" width="100">
+    </main>
+  </body>
+</html>
