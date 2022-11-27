@@ -1,0 +1,5 @@
+.git
+.gitignore
+.vscode/settings.json
+*.pyc
+__pycache__/

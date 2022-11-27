@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  backend:
+    container_name: python
+    restart: unless-stopped
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    command: python -u app.py
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./backend/src/:/app/
